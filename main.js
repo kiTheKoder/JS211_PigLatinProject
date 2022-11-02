@@ -22,9 +22,13 @@ const pigLatin = (word) => {
 
   /*I NORMALLY WOULD NOT LEAVE WASTE NOTES IN MY DOCUMENT, BUT I WANT YOU TO SEE MY THINKING */
 
-  // converts to lowercase and trims
+
+  
+
+  // converts string to lowercase and trims it
 word= word.toLowerCase().trim()
 
+//checks for vowel as first letter of a string
 if (word[0] == "a" || word[0] == "e" || word[0] == "i" || word[0] == "o" || word[0] == "u")
   {
 
@@ -32,8 +36,11 @@ if (word[0] == "a" || word[0] == "e" || word[0] == "i" || word[0] == "o" || word
     return word
   }
 
+
+//holds the value of the first two consonants of the word, as assigned within the function
 let firstTwoConsonants = "  "
 
+//checks for consonant as the first two letters of a string
 if (word[0,1] !== "a" && word[0,1] !== "e" && word[0,1] !== "i" && word[0,1] !== "o" && word[0,1] !== "u")
 {
   
@@ -51,16 +58,16 @@ return word
  delete wordArray[0];
  delete wordArray[1];
 
-word = wordArray.join()
-
-word = word.replace(',', "")
- 
-word = word + firstTwoConsonants + "ay"
-return word*/
+  word = wordArray.join()
+  word = word.replace(',', "")
+  word = word + firstTwoConsonants + "ay"
+  return word*/
 
 
+//holds value of the first consonant of the word, as assigned within the function
 let firstConsonant = ""
 
+//checks if the first letter of a string is a consonant
 if (word[0] !== "a" && word[0] !== "e" && word[0] !== "i" && word[0] !== "o" && word[0] !== "u")
   {
   firstConsonant += word[0]

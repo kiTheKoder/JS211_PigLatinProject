@@ -14,8 +14,69 @@ const rl = readline.createInterface({
 const pigLatin = (word) => {
 
   // Your code here
+  
+  //GOAL : take word and translate it to "pig latin"
+  //PIG LATIN RULES:
+  // if the word starts with a consonant take the first letter of a word and place it in the back of the original word nd add yay
+  //if the word starts with a vowel, we attach "yay" at the end
+
+  /*I NORMALLY WOULD NOT LEAVE WASTE NOTES IN MY DOCUMENT, BUT I WANT YOU TO SEE MY THINKING */
+
+  // converts to lowercase and trims
+word= word.toLowerCase().trim()
+
+if (word[0] == "a" || word[0] == "e" || word[0] == "i" || word[0] == "o" || word[0] == "u")
+  {
+
+    word = word + "yay"
+    return word
+  }
+
+let firstTwoConsonants = "  "
+
+if (word[0,1] !== "a" && word[0,1] !== "e" && word[0,1] !== "i" && word[0,1] !== "o" && word[0,1] !== "u")
+{
+  
+firstTwoConsonants = word[0]
+firstTwoConsonants+= word[1]
+
+word = word.substr(2) + firstTwoConsonants + "ay"
+
+return word
+}
+
+
+
+/*let wordArray = word.split("")
+ delete wordArray[0];
+ delete wordArray[1];
+
+word = wordArray.join()
+
+word = word.replace(',', "")
+ 
+word = word + firstTwoConsonants + "ay"
+return word*/
+
+
+let firstConsonant = ""
+
+if (word[0] !== "a" && word[0] !== "e" && word[0] !== "i" && word[0] !== "o" && word[0] !== "u")
+  {
+  firstConsonant += word[0]
+
+  word = word.slice(1)
+  word = word + firstConsonant + "ay"
+
+  return word 
+
+  }
+
+
 
 }
+
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js

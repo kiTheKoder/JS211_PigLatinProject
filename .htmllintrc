@@ -1,7 +1,4 @@
-{
-    // names of npm modules to load into htmllint
-    "plugins": [],
-    // https://github.com/htmllint/htmllint/wiki/Options
+{   "plugins": [],
     "indent-width": 2,
     "line-end-style": false,
     "indent-style": "spaces",

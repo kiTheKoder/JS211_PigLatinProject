@@ -3,17 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <style src="styles.css"></style>
+    <script src="pigLatin2.js"></script>
   </head>
-  <body>
+  <body id="bodystyle">
     <h1>Hello World!</h1>
     <hr/>
     <div id="display-element"></div>
     <form>
-      <input id="user-input" type="text">
-      <!-- How do you get this input sent to the pigLatin() function? -->
-      <button onclick="pigLatin()">Translate</button>
-    </form>  
+      <textArea class="textInput" id="textInput"
+   > </textArea>
+
+   <div id="pigLatinButtons">
+    <button class="translateButton"id="translateButton">Translate
+    </button>
+
+    <button class="resetButton"id="resetButton">Reset
+    </button>
+
+   </div>
+
+   <p class="text-output" id="textOutput"></p>
+
+   <script type="text/javascript" src="pigApp.js"></script>
+      
     <hr/>
   </body>
 </html>
